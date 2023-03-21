@@ -18,5 +18,17 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        $this->call([
+            LanguageSeeder::class,
+            FormatSeeder::class,
+            GenreSeeder::class,
+            CountrySeeder::class,
+            AuthorSeeder::class,
+            PublisherSeeder::class,
+            BookSeeder::class,
+        ]);
+        /* sail artisan migrate:fresh --seed */
+        /* sail artisan migrate */
+        /* sail artisan db:seed */
     }
 }
