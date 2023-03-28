@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('country', 128)->nullable();
+            $table->string('url')->nullable();
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\ItemStatus;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,11 +21,12 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             LanguageSeeder::class,
+            CountrySeeder::class,
             FormatSeeder::class,
             GenreSeeder::class,
-            CountrySeeder::class,
-            AuthorSeeder::class,
             PublisherSeeder::class,
+            ItemStatus::class,
+            AuthorSeeder::class,
             BookSeeder::class,
         ]);
         /* sail artisan migrate:fresh --seed */
